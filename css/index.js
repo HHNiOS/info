@@ -4,13 +4,13 @@ function compatible(works_min, works_max, tweak_compatibility) {
     works_max = numerize(works_max);
     let el = document.querySelector(".compatibility");
     if(currentiOS < works_min) {
-        el.innerHTML = "Your version of iOS is too old for this package. This package works on " + tweak_compatibility + ".";
+        el.innerHTML = "Phiên bản iOS của bạn quá cũ cho gói này. Gói này hoạt động trên " + tweak_compatibility + ".";
         el.classList.add("red")
     } else if(currentiOS > works_max) {
-        el.innerHTML = "Your version of iOS is too new for this package. This package works on " + tweak_compatibility + ".";
+        el.innerHTML = "Phiên bản iOS của bạn là quá mới cho gói này. Gói này hoạt động trên " + tweak_compatibility + ".";
         el.classList.add("red")
     } else if(String(currentiOS) != "NaN") {
-        el.innerHTML = "This package works on your device!";
+        el.innerHTML = "Gói này hoạt động trên thiết bị của bạn!";
         el.classList.add("green")
     }
 }
